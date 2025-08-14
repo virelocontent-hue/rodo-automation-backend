@@ -31,7 +31,7 @@ const pool = new Pool({
 });
 
 // ROUTES
-const auditRoutes = require('./routes/audit');
+const auditRoutes = require('./audit');
 app.use('/api/audit', auditRoutes);
 
 // HEALTH CHECK
@@ -57,5 +57,6 @@ app.listen(PORT, () => {
   console.log(`🚀 RODO Backend running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });
+
 
 module.exports = app;
